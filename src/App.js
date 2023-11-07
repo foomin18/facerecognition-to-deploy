@@ -82,7 +82,7 @@ class App extends Component {
     this.setState({imageUrl: this.state.input});
     // stateのimgUrlにinputが入るのを待ってから
     //console.log(this.state.imageUrl);
-    fetch('https://smart-brain-api-ryu1.onrender.com/imageUrl', 
+    fetch('https://smart-brain-api-backend.onrender.com/imageUrl', 
     {
       method: 'post',
       headers: {'Content-Type': 'application/json'},
@@ -95,7 +95,7 @@ class App extends Component {
       console.log(response);
       const boxnum = response.outputs[0].data.regions.length;
       if (response) {
-        fetch('https://smart-brain-api-ryu1.onrender.com/image', 
+        fetch('https://smart-brain-api-backend.onrender.com/image', 
         {
           method: 'put',
           headers: {'Content-Type': 'application/json'},
